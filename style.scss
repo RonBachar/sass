@@ -1,0 +1,27 @@
+@import './sass/reset';
+@import './sass/base';
+@import './sass/colors';
+@import './sass/mixin';
+@import '/sass/typography';
+
+
+body {
+    background-color: $bodyBgc;
+    text-align: center;
+
+    .container{
+        @include box-margins(80rem)
+    }
+
+    .outer-box {
+        @include box-size(500px, 500px);
+        @include bordered(5px, deeppink);
+        background-color: $box1Bgc;
+
+        .inner-box {
+            @include box-size(350px, 350px);
+            @include bordered(3px, darkblue);
+            background-color: $box2Bgc;
+        }
+    }
+}
